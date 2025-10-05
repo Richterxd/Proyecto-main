@@ -144,7 +144,7 @@
                             Afiliados
                         @endif
                     </a>
-                    <a href="{{ route('trabajador.indexDos') }}" title="Trabajadores"
+                    <a href="{{ route('dashboard.superadmin.trabajadores') }}" title="Trabajadores"
                         class="block py-2 text-sm rounded transition duration-200 hover:bg-gray-400 hover:text-white"
                         :class="{
                             'px-4': !@json($osultarSidebar),
