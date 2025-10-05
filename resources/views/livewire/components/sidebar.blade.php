@@ -118,7 +118,7 @@
                         'ml-5': !@json($osultarSidebar),
                         'ml-0': @json($osultarSidebar)
                     }">
-                    <a href="{{ route('usuarios') }}" title="Usuarios"
+                    <a href="{{ route('dashboard.superadmin.usuarios') }}" title="Usuarios"
                         class="block py-2 text-sm rounded transition duration-200 hover:bg-gray-400 hover:bg-opacity-50 hover:text-white"
                         :class="{
                             'px-4': !@json($osultarSidebar),
