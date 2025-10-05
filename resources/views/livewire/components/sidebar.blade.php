@@ -264,19 +264,21 @@
                         'ml-5': !@json($osultarSidebar),
                         'ml-0': @json($osultarSidebar)
                     }">
-                    <a href="#" title="oviedo"
-                        class="block py-2 text-sm rounded transition duration-200 hover:bg-gray-400 hover:text-white"
-                        :class="{
-                            'px-4': !@json($osultarSidebar),
-                            'px-2': @json($osultarSidebar)
-                        }"
-                        wire:navigate>
-                        @if ($osultarSidebar)
-                            {{ substr('oviedo', 0, 4) }}.
-                        @else
-                            oviedo
-                        @endif
-                    </a>
+                    @if(Auth::user()->isSuperAdministrador() || Auth::user()->isAdministrador())
+                        <a href="{{ route('dashboard.superadmin.reuniones') }}" title="Gestión de Reuniones"
+                            class="block py-2 text-sm rounded transition duration-200 hover:bg-gray-400 hover:text-white"
+                            :class="{
+                                'px-4': !@json($osultarSidebar),
+                                'px-2': @json($osultarSidebar)
+                            }"
+                            wire:navigate>
+                            @if ($osultarSidebar)
+                                {{ substr('Gestión', 0, 4) }}.
+                            @else
+                                Gestión de Reuniones
+                            @endif
+                        </a>
+                    @endif
                 </div>
             @endif
         </div>
