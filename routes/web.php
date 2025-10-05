@@ -108,4 +108,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard/superadmin/solicitudes', SuperAdminSolicitudes::class)
         ->name('dashboard.superadmin.solicitudes')
         ->middleware('role:1');
+
+    Route::get('/dashboard/superadmin/reuniones', \App\Livewire\Dashboard\SuperAdminReuniones::class)
+        ->name('dashboard.superadmin.reuniones')
+        ->middleware('role:1');
 });
