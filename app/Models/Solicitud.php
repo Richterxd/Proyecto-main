@@ -101,6 +101,11 @@ class Solicitud extends Model
         return $this->hasMany(SolicitudPersonaAsociada::class, 'solicitud_id');
     }
 
+    public function reuniones(): HasMany
+    {
+        return $this->hasMany(Reunion::class, 'solicitud_id', 'solicitud_id');
+    }
+
     /**
      * Generate unique solicitud ID
      */
